@@ -4,7 +4,9 @@
   "description": "Homepage for a furniture e-commerce homepage",
   "main": "index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "start": "npx sass scss/global.scss css/global.css --watch",
+    "build": "npx sass scss/global.scss css/global.css --style=compressed",
+    "deploy": "npm run build && gh-pages -d ."
   },
   "repository": {
     "type": "git",
