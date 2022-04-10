@@ -1,0 +1,19 @@
+{
+  "name": "room-homepage",
+  "version": "1.0.0",
+  "description": "Homepage for a furniture e-commerce homepage",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CodyKelly/room-homepage.git"
+  },
+  "author": "Cody Kelly",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CodyKelly/room-homepage/issues"
+  },
+  "homepage": "https://github.com/CodyKelly/room-homepage#readme"
+}
