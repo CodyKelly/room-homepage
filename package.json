@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/CodyKelly/room-homepage/issues"
   },
-  "homepage": "https://github.com/CodyKelly/room-homepage#readme"
+  "homepage": "https://github.com/CodyKelly/room-homepage#readme",
+  "dependencies": {
+    "gorko": "^0.9.1"
+  }
 }
