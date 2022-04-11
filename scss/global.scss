@@ -1,8 +1,8 @@
 // Our CSS reset
-@use './reset';
+@import './reset';
 
 // Gorko config
-@use './config';
+@import './config';
 
 // Gorko utilities
-@use '../node_modules/gorko/gorko';
+@import '../node_modules/gorko/gorko';
