@@ -6,3 +6,20 @@
 
 // Gorko utilities
 @import '../node_modules/gorko/gorko';
+
+// Block classes
+@import './blocks/_img';
+@import './blocks/_button';
+@import './blocks/text';
+
+$button-width: 20px;
+
+body {
+  display: grid;
+  grid-template-columns: 30% 30% calc($button-width * 2) 1fr;
+  grid-template-rows: 60% $button-width 1fr;
+  grid-template-areas:
+    'a a b b'
+    'a a b b'
+    'c d d e';
+}

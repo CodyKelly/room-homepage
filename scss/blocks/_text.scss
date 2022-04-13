@@ -1,0 +1,9 @@
+.text {
+  &--main {
+    grid-area: b;
+  }
+
+  &--supplemental {
+    grid-area: d;
+  }
+}
