@@ -4,4 +4,9 @@
   overflow: hidden;
   display: grid;
   place-content: center;
+
+  &--flex {
+    display: flex;
+    flex-direction: row;
+  }
 }
