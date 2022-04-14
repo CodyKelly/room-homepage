@@ -17,7 +17,9 @@
 @import './utilities/grid-area';
 
 body {
+  background-color: get-color('light');
   overflow: hidden;
+  font-family: 'Spartan', sans-serif;
 }
 
 main {
@@ -25,7 +27,7 @@ main {
   height: 100vh;
   display: grid;
   grid-template-columns: 30% 30% calc($button-width * 2) 1fr;
-  grid-template-rows: 66% $button-width 1fr;
+  grid-template-rows: 60% $button-width 1fr;
   grid-template-areas:
     'a a b b'
     'a a b b'

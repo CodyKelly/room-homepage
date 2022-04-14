@@ -26,30 +26,38 @@
   <body>
     <nav>Home Shop About Contact</nav>
     <main>
-      <div class="container grid-area--a">
+      <div class="container container--flex grid-area--a">
         <img
           src="./images/desktop-image-hero-1.jpg"
           alt="Our chairs in a clean, modern dining area"
-          class="img img--hero"
+          class="img"
         />
-        <img
+        <!-- <img
           src="./images/desktop-image-hero-2.jpg"
           alt="Three of our chairs in a variety of colors"
-          class="img img--hero"
+          class="img"
         />
         <img
           src="./images/desktop-image-hero-3.jpg"
           alt="A collapsible chair"
-          class="img img--hero"
-        />
+          class="img"
+        /> -->
       </div>
 
       <div
         style="grid-column-start: 3; grid-row-start: 2"
         class="container--flex"
       >
-        <button class="button">&LeftAngleBracket;</button>
-        <button class="button">&RightAngleBracket;</button>
+        <button class="button">
+          <img class="button__icon" src="./images/icon-angle-left.svg" alt="" />
+        </button>
+        <button class="button">
+          <img
+            class="button__icon"
+            src="./images/icon-angle-right.svg"
+            alt=""
+          />
+        </button>
       </div>
 
       <article class="container text text--main grid-area--b">
@@ -86,9 +94,12 @@
           <a href="">Shop now</a>
         </div>
       </article>
+      <div class="container container--flex grid-area--c img">
+        <img src="./images/image-about-dark.jpg" alt="" class="img" />
+      </div>
       <article class="text text--supplemental grid-area--d">
         <h2>About our furniture</h2>
-        <p>
+        <p class="text-300">
           Our multifunctional collection blends design and function to suit your
           individual taste. Make each room unique, or pick a cohesive theme that
           best express your interests and what inspires you. Find the furniture
@@ -97,6 +108,9 @@
           dream space.
         </p>
       </article>
+      <div class="container container--flex">
+        <img src="./images/image-about-light.jpg" alt="" class="img" />
+      </div>
     </main>
   </body>
 </html>

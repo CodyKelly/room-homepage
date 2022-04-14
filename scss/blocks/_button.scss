@@ -1,4 +1,4 @@
-$button-width: 5vw;
+$button-width: 4vw;
 
 .button {
   width: $button-width;
@@ -9,8 +9,16 @@ $button-width: 5vw;
   border-radius: 0;
   z-index: 1;
   cursor: pointer;
+  display: grid;
+  place-items: center;
+  background-color: get-color('dark');
 
   &:hover {
-    background-color: gray;
+    background-color: get-color('dark-gray');
+  }
+
+  &__icon {
+    width: auto;
+    height: 30%;
   }
 }
