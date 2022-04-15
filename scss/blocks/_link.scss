@@ -1,0 +1,21 @@
+.link {
+  position: relative;
+
+  &::after {
+    $width: 50%;
+
+    content: ' ';
+    position: absolute;
+    top: 150%;
+    left: calc(50% - $width / 2);
+    width: $width;
+    height: 3px;
+    background-color: get-color(light);
+    scale: 0;
+    transition: scale 200ms;
+  }
+
+  &:hover::after {
+    scale: 1;
+  }
+}
