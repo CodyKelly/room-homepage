@@ -1,20 +1,37 @@
 $button-width: 4vw;
 
 .button {
-  width: $button-width;
-  height: $button-width;
-  grid-column-start: 3;
-  grid-row-start: 2;
   border: 0;
   border-radius: 0;
-  z-index: 1;
-  cursor: pointer;
-  display: grid;
-  place-items: center;
-  background-color: get-color('dark');
 
-  &:hover {
-    background-color: get-color('dark-gray');
+  cursor: pointer;
+
+  &--slide {
+    width: $button-width;
+    height: $button-width;
+    grid-column-start: 3;
+    grid-row-start: 2;
+    z-index: 1;
+    display: grid;
+    place-items: center;
+    background-color: get-color('dark');
+
+    &:hover {
+      background-color: get-color('dark-gray');
+    }
+  }
+
+  &--shop {
+    background: none;
+
+    &:hover {
+      opacity: 50%;
+    }
+
+    &::after {
+      margin-inline-start: 2rem;
+      content: url('../../images/icon-arrow.svg');
+    }
   }
 
   &__icon {

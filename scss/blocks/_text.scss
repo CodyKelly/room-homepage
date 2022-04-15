@@ -1,3 +1,10 @@
 .text {
-  padding: 4rem;
+  padding: get-size('700');
+
+  &--main {
+    padding: get-size('900');
+  }
+
+  &--supplemental {
+  }
 }

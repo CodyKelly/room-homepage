@@ -1,0 +1,13 @@
+.slide {
+  animation-name: slide;
+  animation-duration: 200ms;
+}
+
+@keyframes slide {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0%);
+  }
+}

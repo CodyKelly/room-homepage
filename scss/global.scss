@@ -8,18 +8,38 @@
 @import '../node_modules/gorko/gorko';
 
 // Block classes
-@import './blocks/_img';
-@import './blocks/_button';
-@import './blocks/_text';
-@import './blocks/_container';
+@import './blocks/img';
+@import './blocks/button';
+@import './blocks/text';
+@import './blocks/container';
+@import './blocks/slide';
 
 // Utility classes
 @import './utilities/grid-area';
+@import './utilities/flow';
+
+:root {
+  --flow-size: 2rem;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 0.8rem;
+}
+
+.capitalize {
+  text-transform: uppercase;
+}
 
 body {
   background-color: get-color('light');
   overflow: hidden;
   font-family: 'Spartan', sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  @extend .text-600;
+  line-height: 1;
 }
 
 main {
