@@ -1,7 +1,7 @@
 .slide {
   $slide-duration: 750ms;
   $slide-function: none;
-  $slide-distance: 99%; // Leaving 1% of overlap because there can sometimes be 1 pixel between slides and it looks weird
+  $slide-distance: 99.9%; // Leaving 1% of overlap because there can sometimes be 1 pixel between slides and it looks weird
   grid-row: 1;
   grid-column: 1;
 
