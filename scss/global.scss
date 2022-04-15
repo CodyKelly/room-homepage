@@ -21,6 +21,7 @@
 
 :root {
   --flow-size: 2rem;
+  --button-width: 10vw;
 }
 
 .inactive {
@@ -37,27 +38,50 @@
 
 body {
   background-color: get-color('light');
-  overflow: hidden;
   font-family: 'Spartan', sans-serif;
   line-height: 1.6;
 }
 
 h1 {
-  @extend .text-600;
-  line-height: 1;
+  font-size: get-size('500');
+  line-height: 1.25;
+
+  @include media-query('lg') {
+    line-height: 1;
+    font-size: get-size('600');
+  }
 }
 
 main {
   width: 100%;
   height: 100vh;
   display: grid;
-  grid-template-columns: 30% 30% calc($button-width * 2) 1fr;
-  grid-template-rows: 60% $button-width 1fr;
+  grid-template-columns:
+    calc(100% - var(--button-width) * 2) [button-start] calc(
+      var(--button-width) * 2
+    )
+    [button-end];
+  grid-template-rows:
+    calc(100vw - var(--button-width)) [button-start] var(--button-width)
+    [button-end] min-content min-content min-content min-content;
   grid-template-areas:
-    'a a b b'
-    'a a b b'
-    'c d d e';
-  place-items: center;
+    'a a'
+    'a a'
+    'b b'
+    'c c'
+    'd d'
+    'e e';
+
+  @include media-query('lg') {
+    --button-width: 4vw;
+    grid-template-columns: 30% 30% [button-start] calc(var(--button-width) * 2) 1fr;
+    grid-template-rows: 60% [button-start] var(--button-width) 1fr;
+    grid-template-areas:
+      'a a b b'
+      'a a b b'
+      'c d d e';
+    place-items: center;
+  }
 }
 
 nav {

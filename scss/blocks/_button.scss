@@ -1,5 +1,3 @@
-$button-width: 4vw;
-
 .button {
   border: 0;
   border-radius: 0;
@@ -7,14 +5,19 @@ $button-width: 4vw;
   cursor: pointer;
 
   &--slide {
-    width: $button-width;
-    height: $button-width;
-    grid-column-start: 3;
-    grid-row-start: 2;
+    width: var(--button-width);
+    height: var(--button-width);
     z-index: 1;
+    // grid-column-start: button-start;
+    // grid-row-start: button-start;
     display: grid;
     place-items: center;
     background-color: get-color('dark');
+
+    @include media-query('lg') {
+      width: var(--button-width);
+      height: var(--button-width);
+    }
 
     &:hover {
       background-color: get-color('dark-gray');
