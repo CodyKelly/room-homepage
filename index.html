@@ -21,37 +21,39 @@
 
     <link rel="stylesheet" href="./css/global.css" />
 
+    <script src="./main.js"></script>
+
     <title>Frontend Mentor | Room homepage</title>
   </head>
   <body>
-    <nav>Home Shop About Contact</nav>
+    <nav class="navbar">Home Shop About Contact</nav>
     <main>
-      <div class="container container--flex grid-area--a">
+      <div class="container container--grid grid-area--a">
         <img
           src="./images/desktop-image-hero-1.jpg"
           alt="Our chairs in a clean, modern dining area"
-          class="img slide"
+          class="img img--slide slide"
         />
-        <!-- <img
+        <img
           src="./images/desktop-image-hero-2.jpg"
           alt="Three of our chairs in a variety of colors"
-          class="img"
+          class="img img--slide slide inactive"
         />
         <img
           src="./images/desktop-image-hero-3.jpg"
           alt="A collapsible chair"
-          class="img"
-        /> -->
+          class="img img--slide slide inactive"
+        />
       </div>
 
       <div
         style="grid-column-start: 3; grid-row-start: 2"
         class="container--flex"
       >
-        <button class="button button--slide">
+        <button class="button button--slide" onclick="slideLeft()">
           <img class="button__icon" src="./images/icon-angle-left.svg" alt="" />
         </button>
-        <button class="button button--slide">
+        <button class="button button--slide" onclick="slideRight()">
           <img
             class="button__icon"
             src="./images/icon-angle-right.svg"
@@ -60,50 +62,57 @@
         </button>
       </div>
 
-      <article class="container text text--main grid-area--b">
-        <div class="flow">
-          <h1>Discover innovative ways to decorate</h1>
-          <p class="text-300 color-gray">
-            We provide unmatched quality, comfort, and style for property owners
-            across the country. Our experts combine form and function in
-            bringing your vision to life. Create a room in your own style with
-            our collection and make your property a reflection of you and what
-            you love.
-          </p>
-          <button
-            class="button button--shop letter-spacing-1 capitalize text-300"
-          >
-            Shop now
-          </button>
+      <article class="container container--grid text text--main grid-area--b">
+        <div class="container slide">
+          <div class="text flow">
+            <h1>Discover innovative ways to decorate</h1>
+            <p class="text-300 color-gray">
+              We provide unmatched quality, comfort, and style for property
+              owners across the country. Our experts combine form and function
+              in bringing your vision to life. Create a room in your own style
+              with our collection and make your property a reflection of you and
+              what you love.
+            </p>
+            <button
+              class="button button--shop letter-spacing-1 capitalize text-300"
+            >
+              Shop now
+            </button>
+          </div>
         </div>
-        <div class="flow">
-          <h1>We are available all across the globe</h1>
-          <p class="text-300 color-gray">
-            With stores all over the world, it's easy for you to find furniture
-            for your home or place of business. Locally, we’re in most major
-            cities throughout the country. Find the branch nearest you using our
-            store locator. Any questions? Don't hesitate to contact us today.
-          </p>
-          <button
-            class="button button--shop letter-spacing-1 capitalize text-300"
-          >
-            Shop now
-          </button>
+        <div class="container slide">
+          <div class="text flow">
+            <h1>We are available all across the globe</h1>
+            <p class="text-300 color-gray">
+              With stores all over the world, it's easy for you to find
+              furniture for your home or place of business. Locally, we’re in
+              most major cities throughout the country. Find the branch nearest
+              you using our store locator. Any questions? Don't hesitate to
+              contact us today.
+            </p>
+            <button
+              class="button button--shop letter-spacing-1 capitalize text-300"
+            >
+              Shop now
+            </button>
+          </div>
         </div>
-        <div>
-          <h1>Manufactured with the best materials</h1>
-          <p class="text-300 color-gray">
-            Our modern furniture store provide a high level of quality. Our
-            company has invested in advanced technology to ensure that every
-            product is made as perfect and as consistent as possible. With three
-            decades of experience in this industry, we understand what customers
-            want for their home and office.
-          </p>
-          <button
-            class="button button--shop letter-spacing-1 capitalize text-300"
-          >
-            Shop now
-          </button>
+        <div class="container slide">
+          <div class="text flow">
+            <h1>Manufactured with the best materials</h1>
+            <p class="text-300 color-gray">
+              Our modern furniture store provide a high level of quality. Our
+              company has invested in advanced technology to ensure that every
+              product is made as perfect and as consistent as possible. With
+              three decades of experience in this industry, we understand what
+              customers want for their home and office.
+            </p>
+            <button
+              class="button button--shop letter-spacing-1 capitalize text-300"
+            >
+              Shop now
+            </button>
+          </div>
         </div>
       </article>
       <div class="container container--flex grid-area--c img">

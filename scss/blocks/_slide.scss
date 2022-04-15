@@ -1,13 +1,59 @@
 .slide {
-  animation-name: slide;
-  animation-duration: 200ms;
-}
+  $slide-duration: 1s;
+  $slide-distance: 100%;
+  grid-row: 1;
+  grid-column: 1;
 
-@keyframes slide {
-  from {
-    transform: translateX(100%);
+  &-in {
+    &-left {
+      animation: slide-in-left $slide-duration;
+    }
+    &-right {
+      animation: slide-in-right $slide-duration;
+    }
   }
-  to {
-    transform: translateX(0%);
+
+  &-out {
+    &-left {
+      animation: slide-out-left $slide-duration;
+    }
+    &-right {
+      animation: slide-out-right $slide-duration;
+    }
+  }
+
+  @keyframes slide-in-left {
+    from {
+      transform: translateX($slide-distance);
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+
+  @keyframes slide-in-right {
+    from {
+      transform: translateX(-($slide-distance));
+    }
+    to {
+      transform: translateX(0%);
+    }
+  }
+  @keyframes slide-out-left {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX(-($slide-distance));
+    }
+  }
+
+  @keyframes slide-out-right {
+    from {
+      transform: translateX(0%);
+    }
+    to {
+      transform: translateX($slide-distance);
+    }
   }
 }
