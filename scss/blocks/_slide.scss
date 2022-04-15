@@ -1,24 +1,25 @@
 .slide {
-  $slide-duration: 1s;
-  $slide-distance: 100%;
+  $slide-duration: 750ms;
+  $slide-function: none;
+  $slide-distance: 99%; // Leaving 1% of overlap because there can sometimes be 1 pixel between slides and it looks weird
   grid-row: 1;
   grid-column: 1;
 
   &-in {
     &-left {
-      animation: slide-in-left $slide-duration;
+      animation: slide-in-left $slide-duration $slide-function;
     }
     &-right {
-      animation: slide-in-right $slide-duration;
+      animation: slide-in-right $slide-duration $slide-function;
     }
   }
 
   &-out {
     &-left {
-      animation: slide-out-left $slide-duration;
+      animation: slide-out-left $slide-duration $slide-function;
     }
     &-right {
-      animation: slide-out-right $slide-duration;
+      animation: slide-out-right $slide-duration $slide-function;
     }
   }
 

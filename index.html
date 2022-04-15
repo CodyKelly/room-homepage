@@ -21,14 +21,14 @@
 
     <link rel="stylesheet" href="./css/global.css" />
 
-    <script src="./main.js"></script>
+    <script src="./main.js" defer></script>
 
     <title>Frontend Mentor | Room homepage</title>
   </head>
   <body>
-    <nav class="navbar">Home Shop About Contact</nav>
+    <nav>Home Shop About Contact</nav>
     <main>
-      <div class="container container--grid grid-area--a">
+      <div class="container container--grid slide--container grid-area--a">
         <img
           src="./images/desktop-image-hero-1.jpg"
           alt="Our chairs in a clean, modern dining area"
@@ -62,7 +62,9 @@
         </button>
       </div>
 
-      <article class="container container--grid text text--main grid-area--b">
+      <article
+        class="container container--grid slide--container text text--main grid-area--b"
+      >
         <div class="container slide">
           <div class="text flow">
             <h1>Discover innovative ways to decorate</h1>
@@ -80,7 +82,7 @@
             </button>
           </div>
         </div>
-        <div class="container slide">
+        <div class="container slide inactive">
           <div class="text flow">
             <h1>We are available all across the globe</h1>
             <p class="text-300 color-gray">
@@ -97,7 +99,7 @@
             </button>
           </div>
         </div>
-        <div class="container slide">
+        <div class="container slide inactive">
           <div class="text flow">
             <h1>Manufactured with the best materials</h1>
             <p class="text-300 color-gray">
