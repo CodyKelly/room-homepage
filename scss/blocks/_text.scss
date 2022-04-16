@@ -1,0 +1,14 @@
+.text {
+  padding-inline: 7%;
+  padding-block: 15%;
+
+  @include media-query('lg') {
+    padding: 20%;
+  }
+
+  &--supplemental {
+    @include media-query('lg') {
+      padding: 6%;
+    }
+  }
+}

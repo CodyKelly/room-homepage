@@ -1,0 +1,101 @@
+// Our CSS reset
+@import './reset';
+
+// Gorko config
+@import './config';
+
+// Gorko utilities
+@import '../node_modules/gorko/gorko';
+
+// Block classes
+@import './blocks/img';
+@import './blocks/button';
+@import './blocks/text';
+@import './blocks/container';
+@import './blocks/slide';
+@import './blocks/link';
+
+// Utility classes
+@import './utilities/grid-area';
+@import './utilities/flow';
+
+:root {
+  --flow-size: 2rem;
+  --button-width: 10vw;
+}
+
+.inactive {
+  scale: 0;
+}
+
+.letter-spacing-1 {
+  letter-spacing: 0.8rem;
+}
+
+.capitalize {
+  text-transform: uppercase;
+}
+
+body {
+  background-color: get-color('light');
+  font-family: 'Spartan', sans-serif;
+  line-height: 1.6;
+}
+
+h1 {
+  font-size: get-size('500');
+  line-height: 1.25;
+
+  @include media-query('lg') {
+    line-height: 1;
+    font-size: get-size('500');
+  }
+}
+
+main {
+  width: 100%;
+  height: 100vh;
+  display: grid;
+  grid-template-columns:
+    calc(100% - var(--button-width) * 2) [button-start] calc(
+      var(--button-width) * 2
+    )
+    [button-end];
+  grid-template-rows:
+    calc(100vw - var(--button-width)) [button-start] var(--button-width)
+    [button-end] min-content min-content min-content min-content;
+  grid-template-areas:
+    'a a'
+    'a a'
+    'b b'
+    'c c'
+    'd d'
+    'e e';
+
+  @include media-query('lg') {
+    --button-width: 4vw;
+    grid-template-columns: 30% 30% [button-start] calc(var(--button-width) * 2) 1fr;
+    grid-template-rows: 60% [button-start] var(--button-width) 1fr;
+    grid-template-areas:
+      'a a b b'
+      'a a b b'
+      'c d d e';
+    place-items: center;
+  }
+}
+
+nav {
+  position: absolute;
+  z-index: 1;
+  text-transform: lowercase;
+
+  ul {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: get-color('light');
+  }
+}

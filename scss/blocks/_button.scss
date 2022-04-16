@@ -1,0 +1,44 @@
+.button {
+  border: 0;
+  border-radius: 0;
+
+  cursor: pointer;
+
+  &--slide {
+    width: var(--button-width);
+    height: var(--button-width);
+    z-index: 1;
+    // grid-column-start: button-start;
+    // grid-row-start: button-start;
+    display: grid;
+    place-items: center;
+    background-color: get-color('dark');
+
+    @include media-query('lg') {
+      width: var(--button-width);
+      height: var(--button-width);
+    }
+
+    &:hover {
+      background-color: get-color('dark-gray');
+    }
+  }
+
+  &--shop {
+    background: none;
+
+    &:hover {
+      opacity: 50%;
+    }
+
+    &::after {
+      margin-inline-start: 2rem;
+      content: url('../../images/icon-arrow.svg');
+    }
+  }
+
+  &__icon {
+    width: auto;
+    height: 30%;
+  }
+}
