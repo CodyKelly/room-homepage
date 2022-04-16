@@ -48,7 +48,7 @@ h1 {
 
   @include media-query('lg') {
     line-height: 1;
-    font-size: get-size('600');
+    font-size: get-size('500');
   }
 }
 
