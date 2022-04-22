@@ -1,0 +1,63 @@
+$dash-height: 4px;
+$dash-width: 1;
+$spacing: 10px;
+$margin: 2rem;
+
+%dash {
+  position: absolute;
+  width: calc($margin * $dash-width);
+  height: $dash-height;
+  border: 0;
+  background-color: white;
+  transition: background-color 0.5s;
+  border-radius: 2px;
+
+  &--black {
+    @extend %dash;
+    background-color: black;
+  }
+}
+
+.menu-button {
+  position: absolute;
+  width: calc($margin * $dash-width);
+  height: calc(3 * $dash-height + 2 * $spacing);
+  padding: 0;
+  margin: $margin;
+  background: 0;
+  border: 0;
+  z-index: 2;
+  cursor: pointer;
+
+  &__decoration {
+    @extend %dash;
+
+    &::before {
+      @extend %dash;
+      content: '';
+      transform: translate(-50%, -(calc($spacing)));
+    }
+
+    &::after {
+      @extend %dash;
+      content: '';
+      transform: translate(-50%, $spacing);
+    }
+
+    &--active {
+      @extend %dash--black;
+
+      &::before {
+        @extend %dash--black;
+        content: '';
+        transform: translate(-50%, -(calc($spacing)));
+      }
+
+      &::after {
+        @extend %dash--black;
+        content: '';
+        transform: translate(-50%, $spacing);
+      }
+    }
+  }
+}

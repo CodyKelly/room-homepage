@@ -1,0 +1,50 @@
+.navbar {
+  $height: 200px;
+
+  position: absolute;
+  height: $height;
+  width: 100%;
+  background-color: white;
+  text-transform: lowercase;
+  color: get-color('dark');
+
+  &__slide-in {
+    animation: slide-in 0.75s;
+  }
+
+  &__slide-out {
+    animation: slide-out 0.75s;
+  }
+
+  ul {
+    display: flex;
+    align-items: center;
+  }
+
+  a {
+    text-decoration: none;
+    color: get-color('dark');
+  }
+
+  @include media-query('lg') {
+    z-index: 1;
+  }
+
+  @keyframes slide-in {
+    from {
+      transform: translateY(-($height));
+    }
+    to {
+      transform: translateY(0);
+    }
+  }
+
+  @keyframes slide-out {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(-($height));
+    }
+  }
+}

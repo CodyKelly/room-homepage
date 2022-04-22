@@ -22,11 +22,15 @@
     <link rel="stylesheet" href="./css/global.css" />
 
     <script src="./scripts/slides.js" defer></script>
+    <script src="./scripts/menu_button.js" defer></script>
 
     <title>Frontend Mentor | Room homepage</title>
   </head>
   <body>
-    <nav class="pad-top-400 color-light">
+    <button class="menu-button" onclick="onMenu()">
+      <div class="menu-button__decoration"></div>
+    </button>
+    <nav class="navbar inactive">
       <ul>
         <li class="room pad-left-700 pad-right-700 text-500">
           <a href="#">Room</a>
