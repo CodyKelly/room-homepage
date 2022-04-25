@@ -1,8 +1,8 @@
 .menu-button {
   position: absolute;
-  width: 30px;
-  height: 30px;
-  inset: 50px;
+  width: min(7%, 2rem);
+  aspect-ratio: 1;
+  inset: 5%;
   background-image: url('../../images/icon-hamburger.svg');
   background-repeat: no-repeat;
   background-size: contain;
