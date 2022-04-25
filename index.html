@@ -22,19 +22,20 @@
     <link rel="stylesheet" href="./css/global.css" />
 
     <script src="./scripts/slides.js" defer></script>
+    <script src="./scripts/menu_button.js" defer></script>
 
     <title>Frontend Mentor | Room homepage</title>
   </head>
   <body>
-    <nav class="pad-top-400 color-light">
-      <ul>
-        <li class="room pad-left-700 pad-right-700 text-500">
-          <a href="#">Room</a>
-        </li>
-        <li><a class="link" href="#">Home</a></li>
-        <li><a class="link" href="#">Shop</a></li>
-        <li><a class="link" href="#">About</a></li>
-        <li><a class="link" href="#">Contact</a></li>
+    <button class="menu-button" aria-controls="navbar" aria-expanded="false">
+      <div class="menu-button__decoration"></div>
+    </button>
+    <nav>
+      <ul class="navbar" data-visible="false">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
     <main>

@@ -14,6 +14,8 @@
 @import './blocks/container';
 @import './blocks/slide';
 @import './blocks/link';
+@import './blocks/navbar';
+@import './blocks/menu-button';
 
 // Utility classes
 @import './utilities/grid-area';
@@ -86,16 +88,4 @@ main {
 
 nav {
   position: absolute;
-  z-index: 1;
-  text-transform: lowercase;
-
-  ul {
-    display: flex;
-    align-items: center;
-  }
-
-  a {
-    text-decoration: none;
-    color: get-color('light');
-  }
 }
