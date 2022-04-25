@@ -27,18 +27,15 @@
     <title>Frontend Mentor | Room homepage</title>
   </head>
   <body>
-    <button class="menu-button" onclick="onMenu()">
+    <button class="menu-button" aria-controls="navbar" aria-expanded="false">
       <div class="menu-button__decoration"></div>
     </button>
-    <nav class="navbar inactive">
-      <ul>
-        <li class="room pad-left-700 pad-right-700 text-500">
-          <a href="#">Room</a>
-        </li>
-        <li><a class="link" href="#">Home</a></li>
-        <li><a class="link" href="#">Shop</a></li>
-        <li><a class="link" href="#">About</a></li>
-        <li><a class="link" href="#">Contact</a></li>
+    <nav>
+      <ul class="navbar" data-visible="false">
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Shop</a></li>
+        <li><a href="#">About</a></li>
+        <li><a href="#">Contact</a></li>
       </ul>
     </nav>
     <main>

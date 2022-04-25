@@ -1,63 +1,21 @@
-$dash-height: 4px;
-$dash-width: 1;
-$spacing: 10px;
-$margin: 2rem;
-
-%dash {
-  position: absolute;
-  width: calc($margin * $dash-width);
-  height: $dash-height;
-  border: 0;
-  background-color: white;
-  transition: background-color 0.5s;
-  border-radius: 2px;
-
-  &--black {
-    @extend %dash;
-    background-color: black;
-  }
-}
-
 .menu-button {
   position: absolute;
-  width: calc($margin * $dash-width);
-  height: calc(3 * $dash-height + 2 * $spacing);
-  padding: 0;
-  margin: $margin;
-  background: 0;
+  width: 30px;
+  height: 30px;
+  inset: 50px;
+  background-image: url('../../images/icon-hamburger.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-color: transparent;
   border: 0;
-  z-index: 2;
+  z-index: 9999;
   cursor: pointer;
 
-  &__decoration {
-    @extend %dash;
+  &[aria-expanded='true'] {
+    background-image: url('../../images/icon-close.svg');
+  }
 
-    &::before {
-      @extend %dash;
-      content: '';
-      transform: translate(-50%, -(calc($spacing)));
-    }
-
-    &::after {
-      @extend %dash;
-      content: '';
-      transform: translate(-50%, $spacing);
-    }
-
-    &--active {
-      @extend %dash--black;
-
-      &::before {
-        @extend %dash--black;
-        content: '';
-        transform: translate(-50%, -(calc($spacing)));
-      }
-
-      &::after {
-        @extend %dash--black;
-        content: '';
-        transform: translate(-50%, $spacing);
-      }
-    }
+  @include media-query('lg') {
+    display: none;
   }
 }

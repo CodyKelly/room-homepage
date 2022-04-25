@@ -1,24 +1,26 @@
 .navbar {
-  $height: 200px;
-
   position: absolute;
-  height: $height;
-  width: 100%;
+  top: 0;
+  min-height: 8rem;
+  min-width: 100vw;
+  padding: 1rem;
+  padding-inline-start: 6rem;
+  z-index: 1000;
+  margin: 0;
   background-color: white;
   text-transform: lowercase;
   color: get-color('dark');
+  display: flex;
+  justify-content: space-evenly;
+  align-content: center;
+  flex-wrap: wrap;
+  gap: 4rem;
+  align-items: center;
+  transform: translateY(-100%);
+  transition: transform 0.5s;
 
-  &__slide-in {
-    animation: slide-in 0.75s;
-  }
-
-  &__slide-out {
-    animation: slide-out 0.75s;
-  }
-
-  ul {
-    display: flex;
-    align-items: center;
+  &[data-visible='true'] {
+    transform: translateY(0);
   }
 
   a {
@@ -27,24 +29,16 @@
   }
 
   @include media-query('lg') {
-    z-index: 1;
-  }
+    background-color: transparent;
+    transform: translateY(0);
+    justify-content: start;
 
-  @keyframes slide-in {
-    from {
-      transform: translateY(-($height));
-    }
-    to {
-      transform: translateY(0);
+    a {
+      color: get-color('light');
     }
   }
 
-  @keyframes slide-out {
-    from {
-      transform: translateY(0);
-    }
-    to {
-      transform: translateY(-($height));
-    }
+  .logo {
+    font-size: 2rem;
   }
 }
