@@ -4,7 +4,7 @@
   min-height: 8rem;
   min-width: 100vw;
   padding: 1rem;
-  padding-inline-start: 6rem;
+  padding-left: 6rem;
   z-index: 1000;
   margin: 0;
   background-color: white;
@@ -25,12 +25,33 @@
   a {
     text-decoration: none;
     color: get-color('dark');
+
+    position: relative;
+
+    &::after {
+      $width: 50%;
+
+      content: ' ';
+      position: absolute;
+      top: 150%;
+      left: calc(50% - $width / 2);
+      width: $width;
+      height: 3px;
+      background-color: get-color(light);
+      scale: 0;
+      transition: scale 200ms;
+    }
+
+    &:hover::after {
+      scale: 1;
+    }
   }
 
   @include media-query('lg') {
     background-color: transparent;
     transform: translateY(0);
     justify-content: start;
+    padding-left: 14rem;
 
     a {
       color: get-color('light');

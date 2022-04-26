@@ -1,0 +1,15 @@
+.logo {
+  position: absolute;
+  width: 100%;
+  z-index: 1;
+  text-align: center;
+  text-transform: lowercase;
+  font-size: get-size('500');
+  color: get-color('light');
+  top: 2.25rem;
+
+  @include media-query('lg') {
+    width: auto;
+    left: 4rem;
+  }
+}

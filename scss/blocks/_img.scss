@@ -5,4 +5,8 @@
 
   &--slide {
   }
+
+  @include media-query('lg') {
+    min-height: 100%;
+  }
 }
