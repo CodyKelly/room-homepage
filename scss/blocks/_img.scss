@@ -1,12 +1,13 @@
 .img {
   min-width: 100%;
   min-height: 100%;
-  object-fit: cover;
+  object-fit: contain;
 
   &--slide {
+    object-fit: cover;
   }
 
   @include media-query('lg') {
-    min-height: 100%;
+    object-fit: cover;
   }
 }
