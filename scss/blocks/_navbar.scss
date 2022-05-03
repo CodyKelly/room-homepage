@@ -38,12 +38,12 @@
       width: $width;
       height: 3px;
       background-color: get-color(light);
-      scale: 0;
-      transition: scale 200ms;
+      transition: transform 200ms;
+      transform: scaleX(0);
     }
 
     &:hover::after {
-      scale: 1;
+      transform: scaleX(1);
     }
   }
 
